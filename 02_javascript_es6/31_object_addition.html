@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReactJS (ES 6)</title>
+  </head>
+  <body>
+    <h1>Belajar JavaScript (ES6)</h1>
+
+    <script>
+      let mahasiswa = {
+        nama: "Ibnu Ahmad Fauzi",
+        umur: 22,
+        jurusan: "Teknik Informatika",
+        getInfo() {
+          return `${this.nama} (${this.umur} tahun) dari jurusan ${this.jurusan}`;
+        },
+      };
+
+      console.log(mahasiswa);
+
+      mahasiswa.umur = 20;
+      mahasiswa.tempatLahir = "Blitar";
+
+      console.log(mahasiswa);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReactJS (ES 6)</title>
+  </head>
+  <body>
+    <h1>Belajar JavaScript (ES6)</h1>
+
+    <script>
+      function tambah(...args) {
+        let total = 0;
+
+        for (let angka of args) {
+          total += angka;
+        }
+
+        return total;
+      }
+
+      console.log(tambah(1, 2, 3));
+    </script>
+  </body>
+</html>

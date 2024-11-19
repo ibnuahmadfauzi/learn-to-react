@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReactJS (ES 6)</title>
+  </head>
+  <body>
+    <h1>Belajar JavaScript (ES6)</h1>
+    <div id="root"></div>
+    <button onclick="renderData()">Tampilkan Data Mahasiswa</button>
+
+    <script>
+      const mahasiswa = [
+        {
+          nama: "Ibnu",
+          jurusan: "Teknik Informatika",
+        },
+        {
+          nama: "Fauzi",
+          jurusan: "Matematika",
+        },
+        {
+          nama: "Ahmad",
+          jurusan: "Desain Komunikasi Visual",
+        },
+      ];
+
+      const prosesMahasiswa = (mahasiswa) =>
+        `<p>${mahasiswa.nama}, ${mahasiswa.jurusan}</p>`;
+
+      const formatMahasiswa = mahasiswa.map(prosesMahasiswa);
+
+      const renderData = () => {
+        document.getElementById("root").innerHTML = formatMahasiswa.join("");
+      };
+    </script>
+  </body>
+</html>
