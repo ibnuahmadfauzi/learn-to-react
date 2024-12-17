@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Uncover</title>
+
+    <style>
+      div {
+        display: flex;
+        justify-content: center;
+      }
+      table {
+        width: 500px;
+        border: 1px solid #373737;
+      }
+      table tr td,
+      table tr th {
+        padding: 10px;
+        border: 1px solid #373737;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="../src/react/react.development.js"></script>
+    <script src="../src/react/react-dom.development.js"></script>
+    <script src="../src/babel/babel.js"></script>
+    <script type="text/babel">
+      const mahasiswas = [
+        {
+          nama: "Eka",
+          umur: 19,
+          jurusan: "Teknik Informatika",
+        },
+        {
+          nama: "Lisa",
+          umur: 19,
+          jurusan: "Sistem Informasi",
+        },
+        {
+          nama: "Eka",
+          umur: 19,
+          jurusan: "Teknik Informatika",
+        },
+      ];
+      const myElement = (
+        <div>
+          <table cellspacing="0">
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Jurusan</th>
+              </tr>
+            </thead>
+            <tbody>
+              {mahasiswas.map((value, index) => (
+                <tr>
+                  <td>{value.nama}</td>
+                  <td>{value.umur}</td>
+                  <td>{value.jurusan}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+      console.log(myElement);
+
+      ReactDOM.createRoot(document.getElementById("root")).render(myElement);
+    </script>
+  </body>
+</html>
