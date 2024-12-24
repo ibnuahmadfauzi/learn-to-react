@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Uncover</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="../src/react/react.development.js"></script>
+    <script src="../src/react/react-dom.development.js"></script>
+    <script src="../src/babel/babel.js"></script>
+    <script type="text/babel">
+      class MyComponent extends React.Component {
+        constructor() {
+          super();
+          this.judulReact = "Belajar React";
+        }
+
+        judulHurufKecil() {
+          return this.judulReact.toLocaleLowerCase();
+        }
+
+        render() {
+          return (
+            <>
+              <h1>{this.judulReact}</h1>
+              <hr />
+              <p>Stt... lagi serius {this.judulHurufKecil()}</p>
+            </>
+          );
+        }
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(
+        <MyComponent />
+      );
+    </script>
+  </body>
+</html>
